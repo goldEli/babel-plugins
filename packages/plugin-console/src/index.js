@@ -2,7 +2,7 @@ const { transformFileSync } = require('@babel/core');
 const insertParametersPlugin = require('./plugin/parameters-insert-plugin');
 const path = require('path');
 
-const { code } = transformFileSync(path.join(__dirname, './sourceCode.js'), {
+const { code } = transformFileSync(path.join(__dirname, './static/sourceCode.js'), {
     plugins: [insertParametersPlugin],
     parserOpts: {
         sourceType: 'unambiguous',

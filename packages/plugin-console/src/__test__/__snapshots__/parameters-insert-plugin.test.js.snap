@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unknown plugin console.xx前插入CallExpression的AST: console.xx前插入CallExpression的AST 1`] = `
+
+console.log(1);
+     
+function func() {
+		console.info(2);
+}
+	
+export default class Clazz {
+		say() {
+				console.debug(3);
+		}
+		render() {
+				return <div>{console.error(4)}</div>
+		}
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+console.log("unkown filename: (1, 0)");
+console.log(1);
+
+function func() {
+  console.log("unkown filename: (4, 2)");
+  console.info(2);
+}
+
+export default class Clazz {
+  say() {
+    console.log("unkown filename: (9, 4)");
+    console.debug(3);
+  }
+
+  render() {
+    return (
+      <div>{[console.log("unkown filename: (12, 17)"), console.error(4)]}</div>
+    );
+  }
+}
+
+
+`;

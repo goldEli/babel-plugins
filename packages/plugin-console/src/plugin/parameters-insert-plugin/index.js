@@ -6,7 +6,7 @@ module.exports = function({types, template}) {
                 if (path.node.isNew) {
                     return;
                 }
-                const calleeName = generate(path.node.callee).code;
+                const calleeName = path.get('callee').toString();
                  if (targetCalleeName.includes(calleeName)) {
                     const { line, column } = path.node.loc.start;
                     const newNode = template.expression(`console.log("${state.filename || 'unkown filename'}: (${line}, ${column})")`)();
