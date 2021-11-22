@@ -1,2 +1,0 @@
-# babel-plugins
-babel-plugins

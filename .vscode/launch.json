@@ -8,7 +8,7 @@
 			"type": "node",
 			"request": "launch",
 			"outputCapture": "std",
-			"name": "Launch Program",
+			"name": "index",
 			"skipFiles": [
 				"<node_internals>/**"
 			],
@@ -17,6 +17,16 @@
 				"${workspaceFolder}/**/*.js"
 			],
 			"preLaunchTask": "tsc"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"outputCapture": "std",
+			"name": "console",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/packages/plugin-console/src/index.js",
 		}
 	]
 }
