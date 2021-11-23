@@ -4,7 +4,12 @@
     {
       "label": "tsc plugin console",
       "type": "shell",
-      "command": "cd ${workspaceFolder}/packages/plugin-console && pwd && tsc && cp -R ./src/static ./lib/ && tsc",
+      "command": "cd ${workspaceFolder}/packages/plugin-console && pwd && tsc && cp -R ./src/static ./lib/",
+    },
+    {
+      "label": "tsc code-frame",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/packages/code-frame && pwd && tsc",
     }
     
   ]

@@ -22,6 +22,20 @@
 			"type": "node",
 			"request": "launch",
 			"outputCapture": "std",
+			"name": "code-frame",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/packages/code-frame"
+			},
+			"program": "${workspaceFolder}/packages/code-frame/lib/index.js",
+			"preLaunchTask": "tsc code-frame"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"outputCapture": "std",
 			"name": "acorn",
 			"skipFiles": [
 				"<node_internals>/**"
