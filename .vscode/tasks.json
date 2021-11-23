@@ -4,7 +4,7 @@
     {
       "label": "tsc plugin console",
       "type": "shell",
-      "command": "cd ${workspaceFolder}/packages/plugin-console && pwd && mkdir lib && cp ./src/static/ ./lib/ ",
+      "command": "cd ${workspaceFolder}/packages/plugin-console && pwd && tsc && cp -R ./src/static ./lib/ && tsc",
     }
     
   ]

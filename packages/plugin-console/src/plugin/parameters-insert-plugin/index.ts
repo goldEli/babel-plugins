@@ -1,5 +1,5 @@
 const targetCalleeName = ['log', 'info', 'error', 'debug'].map(item => `console.${item}`);
-module.exports = function({types, template}) {
+export default function insertParametersPlugin({types, template}) {
     return {
         visitor: {
             CallExpression(path, state) {
