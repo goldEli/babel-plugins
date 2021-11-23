@@ -2,9 +2,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "tsc",
+      "label": "tsc plugin console",
       "type": "shell",
-      "command": "tsc",
+      "command": "cd ${workspaceFolder}/packages/plugin-console && pwd && mkdir lib && cp ./src/static/ ./lib/ ",
     }
     
   ]

@@ -8,25 +8,28 @@
 			"type": "node",
 			"request": "launch",
 			"outputCapture": "std",
-			"name": "index",
+			"name": "console",
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/dist/index.js",
-			"outFiles": [
-				"${workspaceFolder}/**/*.js"
-			],
-			"preLaunchTask": "tsc"
+			"options": {
+				"cwd": "${workspaceFolder}/packages/plugin-console"
+			},
+			"program": "${workspaceFolder}/packages/plugin-console/lib/index.js",
+			"preLaunchTask": "tsc plugin console"
 		},
 		{
 			"type": "node",
 			"request": "launch",
 			"outputCapture": "std",
-			"name": "console",
+			"name": "acorn",
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/packages/plugin-console/src/index.js",
+			"options": {
+				"cwd": "${workspaceFolder}/packages/acorn-plugin"
+			},
+			"program": "${workspaceFolder}/packages/acorn-plugin/index.js",
 		}
 	]
 }
