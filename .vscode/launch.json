@@ -8,6 +8,20 @@
 			"type": "node",
 			"request": "launch",
 			"outputCapture": "std",
+			"name": "tracker",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/packages/auto-track"
+			},
+			"program": "${workspaceFolder}/packages/auto-track/lib/index.js",
+			"preLaunchTask": "tsc auto-track"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"outputCapture": "std",
 			"name": "console",
 			"skipFiles": [
 				"<node_internals>/**"

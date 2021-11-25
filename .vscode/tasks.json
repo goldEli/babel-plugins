@@ -7,6 +7,12 @@
       "command": "cd ${workspaceFolder}/packages/plugin-console && pwd && tsc && cp -R ./src/static ./lib/",
     },
     {
+      "label": "tsc auto-track",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/packages/auto-track && pwd && tsc && cp -R ./static ./lib/",
+    },
+    
+    {
       "label": "tsc test",
       "type": "shell",
       "command": "cd ${workspaceFolder}/packages/test && tsc",
