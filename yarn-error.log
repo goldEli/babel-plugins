@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/miaoyu/.nvm/versions/node/v14.17.2/bin/node /Users/miaoyu/.nvm/versions/node/v14.17.2/bin/yarn add @babel/env
+
+PATH: 
+  /opt/homebrew/opt/openssl@1.1/bin:/opt/homebrew/bin:/Users/miaoyu/.nvm/versions/node/v14.17.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/opt/homebrew/opt/openssl@1.1/bin:/opt/homebrew/bin:/Users/miaoyu/.nvm/versions/node/v14.17.2/bin:/opt/homebrew/sbin:/Users/miaoyu/.cargo/bin:/Users/miaoyu/Library/Android/sdk/emulator:/Users/miaoyu/Library/Android/sdk/tools:/Users/miaoyu/Library/Android/sdk/tools/bin:/Users/miaoyu/Library/Android/sdk/platform-tools:/Users/miaoyu/.yarn/bin:/Users/miaoyu/go/bin:/Users/miaoyu/Library/Android/sdk/emulator:/Users/miaoyu/Library/Android/sdk/tools:/Users/miaoyu/Library/Android/sdk/tools/bin:/Users/miaoyu/Library/Android/sdk/platform-tools:/Users/miaoyu/.yarn/bin:/usr/local/bin:/Users/miaoyu/go/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.17.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/@babel%2fenv: Not found
+      at Request.params.callback [as _callback] (/Users/miaoyu/.nvm/versions/node/v14.17.2/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/Users/miaoyu/.nvm/versions/node/v14.17.2/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (events.js:375:28)
+      at Request.<anonymous> (/Users/miaoyu/.nvm/versions/node/v14.17.2/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (events.js:375:28)
+      at IncomingMessage.<anonymous> (/Users/miaoyu/.nvm/versions/node/v14.17.2/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (events.js:481:28)
+      at IncomingMessage.emit (events.js:387:35)
+      at endReadableNT (internal/streams/readable.js:1317:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "root",
+    "private": true,
+    "devDependencies": {
+      "lerna": "^4.0.0"
+    },
+    "scripts": {
+      "bootstrap": "lerna bootstrap --hoist"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

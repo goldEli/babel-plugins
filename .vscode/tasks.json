@@ -7,6 +7,11 @@
       "command": "cd ${workspaceFolder}/packages/plugin-console && pwd && tsc && cp -R ./src/static ./lib/",
     },
     {
+      "label": "tsc test",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/packages/test && tsc",
+    },
+    {
       "label": "tsc code-frame",
       "type": "shell",
       "command": "cd ${workspaceFolder}/packages/code-frame && pwd && tsc",

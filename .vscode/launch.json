@@ -44,6 +44,20 @@
 				"cwd": "${workspaceFolder}/packages/acorn-plugin"
 			},
 			"program": "${workspaceFolder}/packages/acorn-plugin/index.js",
-		}
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"outputCapture": "std",
+			"name": "test",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/packages/test"
+			},
+			"program": "${workspaceFolder}/packages/test/lib/index.js",
+			"preLaunchTask": "tsc test"
+		},
 	]
 }
