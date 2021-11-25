@@ -12,6 +12,14 @@ var autoTrackPlugin = (0, helper_plugin_utils_1.declare)(function (api, options,
                             var requirePath = curPath.get('source').node.value;
                             if (requirePath === options.trackerPath) {
                                 var specifierPath = curPath.get("specifiers.0");
+                                if (specifierPath.isImportSpecifier()) {
+                                    state.trackerImportId = specifierPath.toString();
+                                }
+                                else if (specifierPath.isImportNamespaceSpecifier()) {
+                                    state.trackerImportId = specifierPath.get('local').toString();
+                                }
+                                // @ts-ignore
+                                path.stop();
                             }
                         }
                     });

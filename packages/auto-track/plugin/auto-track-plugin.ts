@@ -12,8 +12,14 @@ const autoTrackPlugin =  declare((api, options, dirname) => {
 						ImportDeclaration(curPath) {
 							const requirePath = curPath.get('source').node.value;
 							if (requirePath === options.trackerPath) {
-								const specifierPath = curPath.get("specifiers.0");
-								
+								const specifierPath = curPath.get("specifiers.0") as any;
+								if (specifierPath.isImportSpecifier()) {
+									state.trackerImportId = specifierPath.toString();
+								} else if (specifierPath.isImportNamespaceSpecifier()) {
+									state.trackerImportId = specifierPath.get('local').toString();
+								}
+								// @ts-ignore
+								path.stop()
 							}
 						}
 					})
