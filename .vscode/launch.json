@@ -5,6 +5,13 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"command": "npm start",
+			"name": "i18n",
+			"request": "launch",
+			"type": "node-terminal",
+			"cwd": "${workspaceFolder}/packages/i18n"
+		},
+		{
 			"type": "node",
 			"request": "launch",
 			"outputCapture": "std",
